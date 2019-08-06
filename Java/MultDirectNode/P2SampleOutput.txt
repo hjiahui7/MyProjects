@@ -1,0 +1,51 @@
+|Darth Vader| not deleted because it does not exist in the Reviewer database.
+|Death Note| not deleted because it does not exist in the Movie database.
+Movies:
+Total records: 0
+Reviewers:
+Total records: 0
+There are no ratings in the database
+Cannot list, reviewer |Darth Vader| not found in the database.
+Cannot list, movie |Death Note| not found in the database.
+Reviewer |Darth Vader| not found in the database.
+Movie |Death Note| not found in the database.
+Rating added: |John Doe|, |Spirited Away|, 9
+|John Doe| not deleted because it does not exist in the Movie database.
+|John Doe| has been deleted from the Reviewer database.
+|Spirited Away| has been deleted from the Movie database.
+Bad score |0|. Scores must be between 1 and 10.
+Rating added: |Darth Vader|, |Death Note|, 1
+|Darth Vader| has been deleted from the Reviewer database.
+There are no ratings in the database
+Rating added: |Darth Vader|, |Death Note|, 5
+Rating added: |Darth Vader|, |Death Note|, 1
+There is no reviewer similar to |Darth Vader|
+There is no movie similar to |Death Note|
+|Death Note| has been deleted from the Movie database.
+Ratings for reviewer |Darth Vader|:
+Rating added: |Darth Vader|, |Death Note|, 1
+Rating added: |David Lynch|, |Twin Peaks Returns|, 10
+Darth Vader: 2
+David Lynch: 3
+Death Note: 2:1 
+Twin Peaks Returns: 3:10 
+Movies:
+|Death Note| 0
+|Twin Peaks Returns| 1
+Total records: 2
+Reviewers:
+|Darth Vader| 0
+|David Lynch| 4
+Total records: 2
+There is no reviewer similar to |Darth Vader|
+There is no movie similar to |Death Note|
+Rating added: |David Lynch|, |Death Note|, 2
+Darth Vader: 2
+David Lynch: 3
+Death Note: 2:1 3:2 
+Twin Peaks Returns: 3:10 
+The reviewer |David Lynch| is similar to |Darth Vader| with score 1.0
+Rating added: |Dr. Shaffer|, |Batman Begins|, 10
+Reviewer hash table size doubled to 12 slots.
+Movie hash table size doubled to 12 slots.
+Rating added: |Sergio Leone|, |The Good, the Bad and the Ugly|, 10

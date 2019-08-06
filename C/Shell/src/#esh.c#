@@ -1,0 +1,236 @@
+/*
+ * esh - the 'pluggable' shell.
+ *
+ * Developed by Godmar Back for CS 3214 Fall 2009
+ * Virginia Tech.
+ */
+#include <stdio.h>
+#include <readline/readline.h>
+#include <unistd.h>
+#include "esh.h"
+#include "esh-sys-utils.h"
+#include <string.h>
+#include <sys/wait.h>
+
+//field
+struct list jobList;
+struct termios *shell_state
+ /**
+ * Assign ownership of ther terminal to process group
+ * pgrp, restoring its terminal state if provided.
+ *
+ * Before printing a new prompt, the shell should
+ * invoke this function with its own process group
+ * id (obtained on startup via getpgrp()) and a
+ * sane terminal state (obtained on startup via
+ * esh_sys_tty_init()).
+ */
+static void give_terminal_to(pid_t pgrp, struct termios *pg_tty_state)
+{
+	esh_signal_block(SIGTTOU);
+	int rc = tcsetpgrp(esh_sys_tty_getfd(), pgrp);
+	if (rc == -1)
+		esh_sys_fatal_error("tcsetpgrp: ");
+
+	if (pg_tty_state)
+		esh_sys_tty_restore(pg_tty_state);
+	esh_signal_unblock(SIGTTOU);
+}
+
+static void usage(char *progname)
+{
+    printf("Usage: %s -h\n"
+        " -h            print this help\n"
+        " -p  plugindir directory from which to load plug-ins\n",
+        progname);
+
+    exit(EXIT_SUCCESS);
+}
+
+/* Build a prompt by assembling fragments from loaded plugins that 
+ * implement 'make_prompt.'
+ *
+ * This function demonstrates how to iterate over all loaded plugins.
+ */
+static char *
+build_prompt_from_plugins(void)
+{
+    char *prompt = NULL;
+    struct list_elem * e = list_begin(&esh_plugin_list);
+
+    for (; e != list_end(&esh_plugin_list); e = list_next(e)) {
+        struct esh_plugin *plugin = list_entry(e, struct esh_plugin, elem);
+
+        if (plugin->make_prompt == NULL)
+            continue;
+
+        /* append prompt fragment created by plug-in */
+        char * p = plugin->make_prompt();
+        if (prompt == NULL) {
+            prompt = p;
+        } else {
+            prompt = realloc(prompt, strlen(prompt) + strlen(p) + 1);
+            strcat(prompt, p);
+            free(p);
+        }
+    }
+
+    /* default prompt */
+    if (prompt == NULL)
+        prompt = strdup("esh> ");
+
+    return prompt;
+}
+
+/* The shell object plugins use.
+ * Some methods are set to defaults.
+ */
+struct esh_shell shell =
+{
+    .build_prompt = build_prompt_from_plugins,
+    .readline = readline,       /* GNU readline(3) */ 
+    .parse_command_line = esh_parse_command_line /* Default parser */
+};
+
+
+
+int main(int ac, char *av[])
+{
+    int opt;
+    list_init(&esh_plugin_list);
+	list_init(&jobList);
+    /* Process command-line arguments. See getopt(3) */
+    while ((opt = getopt(ac, av, "hp:")) > 0) {
+        switch (opt) {
+        case 'h':
+            usage(av[0]);
+            break;
+
+        case 'p':
+            esh_plugin_load_from_directory(optarg);
+            break;
+        }
+    }
+	esh_signal_sethandler(SIGCHLD, handler);
+	setpgid(0, 0);
+	shell_state = esh_sys_tty_init();
+    esh_plugin_initialize(&shell);
+	give_terminal_to(getpgrp(), shell_state);
+    /* Read/eval loop. */
+    for (;;) {
+        /* Do not output a prompt unless shell's stdin is a terminal */
+        char * prompt = isatty(0) ? shell.build_prompt() : NULL;
+        char * cmdline = shell.readline(prompt);
+		//cmd×Ö·û
+        free (prompt);
+
+        if (cmdline == NULL)  /* User typed EOF */
+            break;
+
+        struct esh_command_line * cline = shell.parse_command_line(cmdline);
+        free (cmdline);
+        if (cline == NULL)                  /* Error in command line */
+            continue;
+
+        if (list_empty(&cline->pipes)) {    /* User hit enter */
+            esh_command_line_free(cline);
+            continue;
+        }
+		struct list pipeline = cline->pipes;
+		//Ö´ÐÐ
+        esh_command_line_print(cline);
+        esh_command_line_free(cline);
+    }
+    return 0;
+}
+
+void eval(struct esh_command_line * cline)
+{
+	struct esh_pipeline *pipeNode = list_entry(list_begin(&cline->pipes), struct esh_pipeline, elem);
+	struct list_elem *comNode = list_begin(&pipeNode->commands);
+	struct esh_command *com = list_entry(comNode, struct esh_command, elem);
+	if (check_isBuildin)
+	{
+		char* comLine = com->argv[0];
+		doBuildin(comLine);
+	}
+	else
+	{
+
+	}
+}
+
+
+bool check_isBuildin(struct esh_command *com)
+{
+	char* comLine = com->argv[0];
+	if(strcmp(comLine, "jobs") == 0) return true;
+	if(strcmp(comLine, "fg") == 0) return true;
+	if(strcmp(comLine, "bg") == 0) return true;
+	if(strcmp(comLine, "kill") == 0) return true;
+	if(strcmp(comLine, "stop") == 0) return true;
+	return false;
+}
+
+void doBuildin(char *line)
+{
+	if (strcmp(comLine, "jobs") == 0) doJobs();
+	if (strcmp(comLine, "fg") == 0) 
+	if (strcmp(comLine, "bg") == 0)
+	if (strcmp(comLine, "kill") == 0)
+	if (strcmp(comLine, "stop") == 0)
+}
+
+void handler(int sig) {
+	pid_t child;
+	int status;
+
+	assert(sig == SIGCHLD);
+
+	while ((child = waitpid(-1, &status, WUNTRACED | WNOHANG)) > 0) {
+		child_status_change(child, status);
+	}
+}
+
+static void wait_for_job(struct esh_pipeline *pipeline)
+{
+	assert(esh_signal_is_blocked(SIGCHLD));
+
+	while (pipeline->status == FOREGROUND && !list_empty(&pipeline->commands)) {
+		int status;
+
+		pid_t child = waitpid(-1, &status, WUNTRACED);
+		if (child != -1)
+			child_status_change(child, status);
+	}
+}
+
+void doJobs()
+
+ {
+		struct esh_pipeline *j = list_entry(thisJob, struct esh_pipeline, elem);
+		printf("[%d]   ", j->jid);
+		if (j->status == FOREGROUND)
+		{
+			printf("[%d]   FOREGROUND        ");
+		}
+		else if (j->status == STOPPED)
+		{
+			printf("[%d]   STOPPED        ");
+		}
+		else if (j->status == BACKGROUND)
+		{
+			printf("[%d]   BACKGROUND        ");
+		}
+		else if (j->status == NEEDSTERMINAL)
+		{
+			printf("[%d]   NEEDSTERMINAL        ");
+		}
+
+}
+
+void printJobName(struc esh_pipeline *curjobs)
+{
+  
+}
+

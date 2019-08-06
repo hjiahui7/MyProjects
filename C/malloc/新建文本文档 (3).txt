@@ -1,0 +1,144 @@
+
+ln -s ~cs3214/bin/gdb/.gdbinit ~/.gdbinit
+dumplist &heap[7] block elem
+
+r -f traces/short1-bal.rep -v
+r -f traces/coalescing-bal.rep -v
+r -f traces/realloc-bal.rep -v
+b mm_malloc
+p *(struct boundary_tag*)(next_blk_header(mem_heap_lo()+ 2052))
+p *(struct boundary_tag*)(mem_heap_lo()  + )
+b get_heap_index
+b coalesce
+p totall_size
+p list_size(&heap[8])
+b mark_block_used
+b set_header_and_footer
+
+p get_footer(mem_heap_lo())
+mdriver -f traces/realloc2-bal.rep -v
+mdriver -f traces/amptjp-bal.rep -v
+
+
+
+
+
+-----24560
+4072 1020	6
+-----20564	
+
+-----24560
+4072 1020	5
+-----20484
+
+-----20480
+4072 1020	4
+-----16396
+
+-----16392
+4072 1020	3
+-----12316
+
+-----12312
+4072 1020	2
+-----8236
+
+-----8232
+4072 1020	1
+-----4156
+
+-----4152
+48 14
+-----4100
+
+-----4096
+2040 512
+-----2052
+
+-----2048
+2040 512
+-----4
+
+-----0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-----24560
+4072 1020	6
+-----20564	
+
+-----24560
+4072 1020	5
+-----20484
+
+-----20480
+4072 1020	4
+-----16396
+
+-----16392
+4072 1020	3
+-----12316
+
+-----12312
+4072 1020	2
+-----8236
+
+-----8232
+4072 1020	1
+-----4156
+
+-----4152
+48 14
+-----4100
+
+-----4096
+4024 1006
+x
+
+free 528
+-----118372
+
+-----14292
+
+-----10212
+
+-----6132
+
+-----6076
+
+-----2048
+2040 512
+-----4
+
+-----0
+
+
+

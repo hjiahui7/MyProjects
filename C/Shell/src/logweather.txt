@@ -1,0 +1,27 @@
+Loading ../../../../../../../web/courses/cs3214/spring2019/projects/student-plugins/nilesr+robd/weather/weather.so ...done.
+Plugin 'weather' initialized...
+[?1034hesh> weatherweather
+
+No City Entered.
+esh> weather helpweather help
+
+Run with: weather [city]
+esh> weather blacksburgweather blacksburg
+
+The weather in blacksburg: 
+       .-.     
+      (   ).   
+     (___(__)  
+     ' ' ' '   
+    ' ' ' '    
+Rain
+mist
+esh> weather san+franciscoweather san+francisco
+
+The weather in san francisco: 
+       .--.    
+    .-(    ).  
+   (___.__)__) 
+Clouds
+48.2 degrees F
+esh> 

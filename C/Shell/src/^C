@@ -1,0 +1,127 @@
+[?1034hesh> [hawthorn src 1029]$ ./esh -h
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1029]$ ./esh -h
+==========================================
+esh> Usage: ./esh -h
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: Usage: ./esh -h
+==========================================
+esh>  -h            print this help
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: -h print this help
+==========================================
+esh>  -p  plugindir directory from which to load plug-ins
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: -p plugindir directory from which to load plug-ins
+==========================================
+esh> [hawthorn src 1030]$ ls
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1030]$ ls
+==========================================
+esh> esh            esh.h            esh-sys-utils.o  list.h         README
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh esh.h esh-sys-utils.o list.h README
+==========================================
+esh> esh.c          esh.o            esh-utils.c      list.o         test.txt
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh.c esh.o esh-utils.c list.o test.txt
+==========================================
+esh> esh-grammar.l  eshoutput.py     esh-utils.o      Makefile
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh-grammar.l eshoutput.py esh-utils.o Makefile
+==========================================
+esh> esh-grammar.o  esh-sys-utils.c  libesh.a         plugins
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh-grammar.o esh-sys-utils.c libesh.a plugins
+==========================================
+esh> esh-grammar.y  esh-sys-utils.h  list.c           readline.supp
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh-grammar.y esh-sys-utils.h list.c readline.supp
+==========================================
+esh> [hawthorn src 1031]$ ls
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1031]$ ls
+==========================================
+esh> esh            esh.h            esh-sys-utils.o  list.h         README
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh esh.h esh-sys-utils.o list.h README
+==========================================
+esh> esh.c          esh.o            esh-utils.c      list.o         test.txt
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh.c esh.o esh-utils.c list.o test.txt
+==========================================
+esh> esh-grammar.l  eshoutput.py     esh-utils.o      Makefile
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh-grammar.l eshoutput.py esh-utils.o Makefile
+==========================================
+esh> esh-grammar.o  esh-sys-utils.c  libesh.a         plugins
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh-grammar.o esh-sys-utils.c libesh.a plugins
+==========================================
+esh> esh-grammar.y  esh-sys-utils.h  list.c           readline.supp
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: esh-grammar.y esh-sys-utils.h list.c readline.supp
+==========================================
+esh> [hawthorn src 1031]$ clear
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1031]$ clear
+==========================================
+esh> [hawthorn src 1032]$ PATH=$PATH:~cs3214/bin
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1032]$ PATH=$PATH:~cs3214/bin
+==========================================
+esh> [hawthorn src 1033]$ PATH=$PATH:~cscd3214/bin/dpipe.variants
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1033]$ PATH=$PATH:~cscd3214/bin/dpipe.variants
+==========================================
+esh> [hawthorn src 1034]$
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: [hawthorn src 1034]$
+==========================================
+esh> clear
+Command line
+ ------------- 
+ Pipeline
+ 1.   Command: clear
+==========================================
+esh> ^Z

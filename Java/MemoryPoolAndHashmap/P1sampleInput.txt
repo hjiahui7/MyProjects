@@ -1,0 +1,23 @@
+add  Bug's life
+add  Attack on Titans
+add Aladdin
+add Sindbad
+print blocks
+update add   Aladdin<SEP>Genre<SEP>Cartoon
+update add   Aladdin<SEP>length<SEP>90:00
+update add Attack on Titans<SEP>Format<SEP>series
+update add Attack on Titans<SEP>length<SEP>90:00
+update add Attack on Titans<SEP>Format<SEP>series
+update add Attack on Titans<SEP>Genre<SEP>series
+
+update add Attack on Titans<SEP>length<SEP>90:00
+update add Attack on Titans<SEP>length<SEP>90:00
+update add Attack on Titans<SEP>length<SEP>90:00
+
+print blocks
+update delete Aladdin<SEP>length
+update add Bug's life<SEP>cast<SEP>ants
+print blocks
+add Animals united
+update delete Aladdin<SEP>Genre
+print blocks

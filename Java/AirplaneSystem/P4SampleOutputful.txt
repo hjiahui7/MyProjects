@@ -1,0 +1,185 @@
+SkipList dump:
+Node has depth 1, Value (null)
+0 skiplist nodes printed
+Bintree dump:
+E
+1 bintree nodes printed
+The following collisions exist in the database:
+The following objects intersect (0 0 0 1024 1024 1024):
+1 nodes were visited in the bintree
+Bad box (100 1010 101 1020 102 1030). All boxes must be entirely within the world box.
+Bad box (100 1010 101 -1020 102 1030). All widths must be positive.
+B1 has been added to the database
+Air1 has been added to the database
+Air2 has been added to the database
+pterodactyl has been added to the database
+Bintree dump:
+I
+  I
+    Leaf with 3 objects:
+    (Airplane Air1 0 10 1 20 2 30 USAir 717 4)
+    (Balloon B1 10 11 11 21 12 31 hot_air 15)
+    (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+    Leaf with 1 objects:
+    (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+  Leaf with 1 objects:
+  (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+5 bintree nodes printed
+Enterprise has been added to the database
+MVPwatch has been added to the database
+Duplicate object names not permitted: |MVPwatch|
+Bintree dump:
+I
+  I
+    I
+      I
+        I
+          I
+            I
+              I
+                I
+                  I
+                    I
+                      Leaf with 3 objects:
+                      (Airplane Air1 0 10 1 20 2 30 USAir 717 4)
+                      (Balloon B1 10 11 11 21 12 31 hot_air 15)
+                      (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+                      Leaf with 3 objects:
+                      (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+                      (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+                      (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+                    Leaf with 1 objects:
+                    (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+                  E
+                Leaf with 2 objects:
+                (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+                (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+              E
+            E
+          E
+        E
+      E
+    Leaf with 1 objects:
+    (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+  Leaf with 1 objects:
+  (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+23 bintree nodes printed
+Found: Drone MVPwatch 50 50 50 50 50 50 Droners 3
+|mvpwatch| does not exist in the database
+SkipList dump:
+Node has depth 3, Value (null)
+Node has depth 3, Value (Airplane Air1 0 10 1 20 2 30 USAir 717 4)
+Node has depth 1, Value (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+Node has depth 2, Value (Balloon B1 10 11 11 21 12 31 hot_air 15)
+Node has depth 1, Value (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+Node has depth 3, Value (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+Node has depth 2, Value (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+6 skiplist nodes printed
+Found these records in the range |a| to |z|
+Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1
+Found these records in the range |a| to |l|
+Error in rangeprint parameters: |z| is not less than |a|
+Found these records in the range |Air2| to |Enterprise|
+Airplane Air2 100 1010 101 924 2 900 Delta 17 2
+Balloon B1 10 11 11 21 12 31 hot_air 15
+Rocket Enterprise 0 100 20 10 50 50 5000 99.29
+Found these records in the range |Air| to |Enterprise|
+Airplane Air1 0 10 1 20 2 30 USAir 717 4
+Airplane Air2 100 1010 101 924 2 900 Delta 17 2
+Balloon B1 10 11 11 21 12 31 hot_air 15
+Rocket Enterprise 0 100 20 10 50 50 5000 99.29
+Bintree dump:
+I
+  I
+    I
+      I
+        I
+          I
+            I
+              I
+                I
+                  I
+                    I
+                      Leaf with 3 objects:
+                      (Airplane Air1 0 10 1 20 2 30 USAir 717 4)
+                      (Balloon B1 10 11 11 21 12 31 hot_air 15)
+                      (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+                      Leaf with 3 objects:
+                      (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+                      (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+                      (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+                    Leaf with 1 objects:
+                    (Drone MVPwatch 50 50 50 50 50 50 Droners 3)
+                  E
+                Leaf with 2 objects:
+                (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+                (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+              E
+            E
+          E
+        E
+      E
+    Leaf with 1 objects:
+    (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+  Leaf with 1 objects:
+  (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+23 bintree nodes printed
+Object |mvpwatch| not in the database
+Deleted |MVPwatch| from the database
+SkipList dump:
+Node has depth 3, Value (null)
+Node has depth 3, Value (Airplane Air1 0 10 1 20 2 30 USAir 717 4)
+Node has depth 1, Value (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+Node has depth 2, Value (Balloon B1 10 11 11 21 12 31 hot_air 15)
+Node has depth 1, Value (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+Node has depth 2, Value (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+5 skiplist nodes printed
+Bintree dump:
+I
+  I
+    I
+      I
+        I
+          I
+            I
+              I
+                I
+                  I
+                    I
+                      Leaf with 2 objects:
+                      (Airplane Air1 0 10 1 20 2 30 USAir 717 4)
+                      (Balloon B1 10 11 11 21 12 31 hot_air 15)
+                      Leaf with 2 objects:
+                      (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+                      (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+                    E
+                  E
+                Leaf with 2 objects:
+                (Rocket Enterprise 0 100 20 10 50 50 5000 99.29)
+                (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+              E
+            E
+          E
+        E
+      E
+    Leaf with 1 objects:
+    (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+  Leaf with 1 objects:
+  (Airplane Air2 100 1010 101 924 2 900 Delta 17 2)
+23 bintree nodes printed
+The following collisions exist in the database:
+(Airplane Air1 0 10 1 20 2 30 USAir 717 4) and (Balloon B1 10 11 11 21 12 31 hot_air 15)
+(Rocket Enterprise 0 100 20 10 50 50 5000 99.29) and (Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1)
+The following objects intersect (0 0 0 1024 1024 1024):
+Airplane Air1 0 10 1 20 2 30 USAir 717 4
+Balloon B1 10 11 11 21 12 31 hot_air 15
+Rocket Enterprise 0 100 20 10 50 50 5000 99.29
+Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1
+Airplane Air2 100 1010 101 924 2 900 Delta 17 2
+23 nodes were visited in the bintree
+The following objects intersect (0 0 0 1 1 1):
+12 nodes were visited in the bintree
+The following objects intersect (0 100 20 10 50 50):
+Rocket Enterprise 0 100 20 10 50 50 5000 99.29
+Bird pterodactyl 0 100 20 10 50 50 Dinosaur 1
+13 nodes were visited in the bintree

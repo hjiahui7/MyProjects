@@ -1,0 +1,49 @@
+"Binary.txt" file, 0 blocks, 10 buffers:
+Cache Hits: 0
+Cache Miss: 0
+Disk Reads: 0
+Disk Writes: 0
+Time: 20 ms
+
+"Binary.txt" file, 0 blocks, 10 buffers:
+Cache Hits: 0
+Cache Miss: 0
+Disk Reads: 0
+Disk Writes: 0
+Time: 4 ms
+
+"Binary.txt" file, 0 blocks, 10 buffers:
+Cache Hits: 0
+Cache Miss: 0
+Disk Reads: 0
+Disk Writes: 0
+Time: 4 ms
+
+"Binary.txt" file, 32 blocks, 10 buffers:
+Cache Hits: 172140
+Cache Miss: 124
+Disk Reads: 124
+Disk Writes: 124
+Time: 138 ms
+
+"Binary.txt" file, 32 blocks, 10 buffers:
+Cache Hits: 1139
+Cache Miss: 73
+Disk Reads: 73
+Disk Writes: 35
+Time: 90 ms
+
+"Binary.txt" file, 32 blocks, 10 buffers:
+Cache Hits: 1139
+Cache Miss: 73
+Disk Reads: 73
+Disk Writes: 35
+Time: 84 ms
+
+"sampleInput16.bin" file, 32 blocks, 10 buffers:
+Cache Hits: 1139
+Cache Miss: 73
+Disk Reads: 73
+Disk Writes: 35
+Time: 97 ms
+

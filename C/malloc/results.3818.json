@@ -1,0 +1,84 @@
+{ "version": "1.1",
+ "varysize": 0,
+ "nthreads": 0,
+ "THREAD_SAFE": false,
+ "results": [
+{ "trace": "amptjp-bal.rep"
+, "valid": true
+, "util": 99.401648
+, "ops": 5694.000000
+, "secs": 0.000699
+, "Kops": 8147.372723
+},
+{ "trace": "cccp-bal.rep"
+, "valid": true
+, "util": 99.354173
+, "ops": 5848.000000
+, "secs": 0.000738
+, "Kops": 7918.788545
+},
+{ "trace": "cp-decl-bal.rep"
+, "valid": true
+, "util": 99.225245
+, "ops": 6648.000000
+, "secs": 0.000800
+, "Kops": 8309.010189
+},
+{ "trace": "expr-bal.rep"
+, "valid": true
+, "util": 99.639988
+, "ops": 5380.000000
+, "secs": 0.000579
+, "Kops": 9286.136058
+},
+{ "trace": "coalescing-bal.rep"
+, "valid": true
+, "util": 93.835930
+, "ops": 14400.000000
+, "secs": 0.000690
+, "Kops": 20861.976296
+},
+{ "trace": "random-bal.rep"
+, "valid": true
+, "util": 94.858200
+, "ops": 4800.000000
+, "secs": 0.000702
+, "Kops": 6839.873155
+},
+{ "trace": "random2-bal.rep"
+, "valid": true
+, "util": 93.697842
+, "ops": 4800.000000
+, "secs": 0.000648
+, "Kops": 7403.007873
+},
+{ "trace": "binary-bal.rep"
+, "valid": true
+, "util": 97.097198
+, "ops": 12000.000000
+, "secs": 0.000667
+, "Kops": 17990.910093
+},
+{ "trace": "binary2-bal.rep"
+, "valid": true
+, "util": 89.926934
+, "ops": 24000.000000
+, "secs": 0.000803
+, "Kops": 29870.909132
+},
+{ "trace": "realloc-bal.rep"
+, "valid": true
+, "util": 99.681041
+, "ops": 14401.000000
+, "secs": 0.000349
+, "Kops": 41280.086866
+},
+{ "trace": "realloc2-bal.rep"
+, "valid": true
+, "util": 76.310790
+, "ops": 14401.000000
+, "secs": 0.000346
+, "Kops": 41569.665488
+}]
+, "perfindex" : { "avg_mm_util": 0.948208, "avg_mm_throughput" : 16000611.706011, "perfindex": 86.661070, "AVG_LIBC_THRUPUT": 21500000.000000 }
+}
